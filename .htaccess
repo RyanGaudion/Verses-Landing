@@ -1,2 +1,4 @@
-RewriteEngine On
-RewriteRule ^$ /src/ [L]
+RewriteEngine on
+
+RewriteCond %{REQUEST_URI} !^/src
+RewriteRule ^(.*)$ /src/$1 [NC,L]
