@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .animation-grow {
+      @apply transition ease-in-out hover:scale-125 duration-300;
+    }
+}
