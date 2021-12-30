@@ -1,4 +1,6 @@
 RewriteEngine on
 
-# RewriteCond %{REQUEST_URI} !^/src
+RewriteCond %{REQUEST_URI} !^/src
+RewriteRule ^(.*)$ /src/$1 [NC,L]
+RewriteCond %{REQUEST_URI} ^/src
 RewriteRule ^(.*)$ /src/$1 [NC,L]
